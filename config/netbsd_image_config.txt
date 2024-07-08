@@ -1,0 +1,16 @@
+#
+upstream_kernel=1
+#
+arm_64bit=1
+os_prefix=dtb/broadcom/
+cmdline=../../cmdline.txt
+kernel=/netbsd.img
+kernel_address=0x200000
+enable_uart=1
+force_turbo=0
+
+# JTAG configuration for raspberrypi4
+gpio=22-27=np
+enable_jtag_gpio=1
+hdmi_force_hotplug=1
+hdmi_drive=2

@@ -1,0 +1,19 @@
+; Host interface
+PBI=
+USB
+
+; Environment variables
+OS=
+ID=T32
+TMP=C:\temp
+SYS=C:\Tools\T32\T32_R_2020_09_000128638
+HELP=C:\Tools\T32\T32_R_2020_09_000128638\pdf
+
+; temporary directory for TRACE32
+; system directory for TRACE32
+; help directory for TRACE32
+; Printer settings
+
+PRINTER=WINDOWS ; all standard windows printer can be
+
+; used from the TRACE32 user interface
