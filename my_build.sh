@@ -12,8 +12,8 @@ rootDir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 if [ $1 = "amd64" ]; then
 
   mkdir -p $rootDir/output/amd64
-  $rootDir/src/build.sh -VMKDEBUG=yes -VMKDEBUGLIB=yes -VMKDEBUGKERNEL=yes -VMKDEBUGTOOLS=yes -O $rootDir/obj -U -u -m amd64 -j16 release sourcesets
-  anita --workdir $rootDir/output/anita --disk-size 10G --memory-size 256M --sets kern-GENERIC,modules,base,etc,comp,debug,games,man,misc,tests,text install $rootDir/obj/releasedir/amd64/
+  $rootDir/src/build.sh -VMKDEBUG=yes -VMKDEBUGLIB=yes -VMKDEBUGKERNEL=yes -VMKDEBUGTOOLS=yes -VMKCROSSGDB=yes -O $rootDir/obj -U -u -m amd64 -j16 release
+  anita --workdir $rootDir/output/anita --disk-size 10G --memory-size 256M --sets kern-GENERIC,base,etc install $rootDir/obj/releasedir/amd64/
   mv $rootDir/output/anita/wd0.img $rootDir/output/amd64/netbsd.img
 
 elif [ $1 = "arm64" ]; then
